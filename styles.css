@@ -5,3 +5,80 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
 }
+.logo-center-div {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: var(--brand-primary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 4%;
+}
+
+.header button {
+  display: flex;
+  border: 1px solid var(--lines-color);
+  background-color: var(--bg_default);
+  border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.buttons-flex {
+  display: flex;
+}
+.header-button-margin {
+  margin-left: 3px;
+}
+.color {
+  width: 0;
+  height: 0;
+  border-left: 100vw solid var(--brand-primary);
+  border-bottom: 5vw solid transparent;
+  position: absolute;
+}
+.color2 {
+  width: 0;
+  height: 0;
+  border-right: 100vw solid var(--brand-secondary);
+  border-bottom: 5vw solid transparent;
+}
+.welcome-sentences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.welcome-sentences h3 {
+  color: var(--brand-secondary);
+  font-weight: 700;
+}
+.mobile-flex {
+  padding: 10px 4%;
+}
+
+@media (width <=390px) {
+  .mobile {
+    display: none;
+  }
+  .header,
+  .mobile-flex {
+    padding: 4%;
+  }
+  p {
+    font-size: 14.5px;
+  }
+}
+@media (width >950px) {
+  .welcome-sentences {
+    top: -1.5rem;
+  }
+}
