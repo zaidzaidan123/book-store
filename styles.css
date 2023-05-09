@@ -124,6 +124,7 @@ main {
   grid-template-columns: repeat(auto-fill, 260px);
   gap: 20px;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 article {
@@ -154,6 +155,7 @@ article {
 }
 .padding-from-pic {
   padding-top: 20px;
+  font-size: 0.9rem;
 }
 .author-opacity {
   opacity: 0.5;
