@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo-center-div">
-            <p class="logo">Web Topics</p>
+    <header class="header container">
+        <div class="logo-container">
+            <h1 class="logo">Web Topics</h1>
         </div>
         <div class="buttons-flex">
-            <button>
+            <button id="btn">
                 <ion-icon name="moon-outline"></ion-icon>
-                <p class="header-button-margin mobile">Dark Mode</p>
+                <p class="toggle-button mobile">Dark Mode</p>
             </button>
-            <button>
+            <button id="fav-button">
                 <ion-icon name="heart-outline"></ion-icon>
-                <p class="header-button-margin mobile">Favorites</p>
+                <p class="toggle-button mobile">Favorites</p>
             </button>
         </div>
     </header>
@@ -38,19 +38,19 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="container">
         <section class="websites-search-input">
             <section class="input-search">
                 <ion-icon name="search-outline" class="icon"></ion-icon>
                 <input type="text" id="websiteFilter" placeholder="Search the website...">
             </section>
-            <section class="sort-select">
+            <section class=" select-website">
                 <p>Sort By:</p>
                 <select name="sort" id="sort">
                     <option value="default">Default</option>
                 </select>
             </section>
-            <section class="filter-select">
+            <section class=" select-website">
                 <p>Filter By:</p>
                 <select name="filter" id="filter">
                     <option value="default">Default</option>
@@ -70,7 +70,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Sarah Smith</section>
             </article>
@@ -83,7 +83,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: David Lee</section>
             </article>
@@ -96,7 +96,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Emily Chen</section>
             </article>
@@ -109,7 +109,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: John Johnson</section>
             </article>
@@ -122,7 +122,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Jessica Davis</section>
             </article>
@@ -135,7 +135,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Daniel Brown</section>
             </article>
@@ -148,7 +148,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Ava Jones</section>
             </article>
@@ -161,7 +161,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Michael Kim</section>
             </article>
@@ -174,7 +174,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Sophia Rodriguez</section>
             </article>
@@ -186,8 +186,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: William Lee</section>
             </article>
@@ -200,7 +200,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Olivia Martinez</section>
             </article>
@@ -212,8 +212,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Ethan Thompson</section>
             </article>
@@ -226,7 +226,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Madison Davis</section>
             </article>
@@ -239,7 +239,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Isabella Wilson</section>
             </article>
@@ -251,8 +251,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Jacob Garcia</section>
             </article>
@@ -265,7 +265,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Mia Brown</section>
             </article>
@@ -278,7 +278,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Evelyn Nguyen</section>
             </article>
@@ -291,7 +291,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Liam Hernandez</section>
             </article>
@@ -303,8 +303,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Avery Perez</section>
             </article>
@@ -317,7 +317,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Victoria Kim</section>
             </article>
@@ -330,7 +330,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Ryan Jones</section>
             </article>
@@ -343,7 +343,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Samantha Martin</section>
             </article>
@@ -356,7 +356,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Luke Davis</section>
             </article>
@@ -368,8 +368,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Grace Wilson</section>
             </article>
@@ -382,7 +382,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Noah Martinez</section>
             </article>
@@ -394,8 +394,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Chloe Taylor</section>
             </article>
@@ -408,7 +408,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: David Lee</section>
             </article>
@@ -421,7 +421,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Emily Kim</section>
             </article>
@@ -434,7 +434,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Gabriel Hernandez</section>
             </article>
@@ -447,7 +447,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Avery Perez</section>
             </article>
@@ -460,7 +460,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Madison Davis</section>
             </article>
@@ -473,7 +473,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Isabella Wilson</section>
             </article>
@@ -486,7 +486,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Jacob Garcia</section>
             </article>
@@ -499,7 +499,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Mia Brown</section>
             </article>
@@ -512,7 +512,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Evelyn Nguyen</section>
             </article>
@@ -524,8 +524,8 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Liam Hernandez</section>
             </article>
@@ -538,7 +538,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Avery Perez</section>
             </article>
@@ -551,7 +551,7 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Victoria Kim</section>
             </article>
@@ -564,16 +564,49 @@
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
                     <ion-icon name="star" class="star"></ion-icon>
-                    <ion-icon name="star-outline"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
                 </section>
                 <section class="padding-topic author-opacity">Author: Ryan Jones</section>
             </article>
-
         </section>
     </main>
-
+    <div class="fav container" id="fav">
+        <h3>My Favorite Topics</h3>
+        <div class="fav-topics">
+            <div class="topic">
+                <img src="Logos/analytics.png" alt="Web Analytics">
+                <section class="bold-topic">Web Analytics</section>
+                <section>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                </section>
+            </div>
+            <div class="topic">
+                <img src="Logos/analytics.png" alt="Web Analytics">
+                <section class=" bold-topic">Web Analytics</section>
+                <section>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Developed With </p>
+            <ion-icon class="heart" name="heart"></ion-icon>
+            <p>&copy; 2023</p>
+        </div>
+    </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>
