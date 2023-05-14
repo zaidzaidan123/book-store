@@ -142,6 +142,7 @@ article {
     0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   background-color: var(--bg_default);
   cursor: pointer;
+  display: grid;
 }
 .topics-articles article img {
   width: 100%;
@@ -174,6 +175,7 @@ article {
 .author-opacity {
   opacity: 0.5;
   padding-bottom: 20px;
+  justify-self: flex-start;
 }
 
 /* main */
