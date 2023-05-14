@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="details.css">
+</head>
+
+<body>
+    <header class="header container">
+        <div class="logo-container">
+            <h1 class="logo">Web Topics</h1>
+        </div>
+        <div class="buttons-flex">
+            <button id="btn">
+                <ion-icon name="moon-outline"></ion-icon>
+                <p class="toggle-button mobile">Dark Mode</p>
+            </button>
+            <button id="fav-button">
+                <ion-icon name="heart-outline"></ion-icon>
+                <p class="toggle-button mobile">Favorites</p>
+            </button>
+        </div>
+    </header>
+    <header>
+        <div class="welcome-website">
+            <div class="triangle1"></div>
+            <div class="triangle2"></div>
+            <div class="welcome-sentences">
+                <div class="mobile-flex">
+                    <h3>Welcome to out website!</h3>
+                    <p>We have a new design that's fresh, modern, and easy to use.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="detail container-details">
+            <section class="text-container">
+                <section>
+                    <p class="title-color">Web Development Languages</p>
+                    <p class="text-color">HTML</p>
+                    <section>
+                        <ion-icon name="star" class="star"></ion-icon>
+                        <ion-icon name="star" class="star"></ion-icon>
+                        <ion-icon name="star" class="star"></ion-icon>
+                        <ion-icon name="star" class="star"></ion-icon>
+                        <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                    </section>
+                </section>
+                <section class="text-color">HTML (Hypertext Markup Language) is the standard markup language for
+                    creating web pages and other information that can be displayed in a web browser. It provides a
+                    structure for content and defines how it should be displayed on a web page, including text, images,
+                    and multimedia. HTML is essential for creating static web pages and is a foundational technology for
+                    the World Wide Web.</section>
+            </section>
+            <section class="card">
+                <div>
+                    <img src="Logos/javascript.jpg" alt="HTML">
+                    <section class="card-outside card-outside-details">
+                        <p class="card-outside" ><b class="card-outside">HTML</b> by <a href="">Sarah Smith</a></p>
+                        <section class="fav-card">
+                            <p class="card-outside">Interested about this topic? </p>
+                            <button class="card-outside card-button">Add to Favorites <ion-icon class="card-outside heart-card" name="heart-outline"></ion-icon></button>
+                            <p class="card-outside Credits">Unlimited Credits</p>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </section>
+        <section class="sub-topics">
+            <div class="container-details">
+                <div class="topics ">
+                    <div class="topics-padding"><h2>HTML Sub Topics</h2></div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML syntax and structure</p>
+                    </div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML elements and attributes</p>
+                    </div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML forms and input elements</p>
+                    </div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML tables and lists</p>
+                    </div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML multimedia elements (audio,video,images)</p>
+                    </div>
+                    <div class="topics_subtitles topics-padding">
+                        <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
+                        <p>HTML accessibility and semantic markup</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <div class="fav container" id="fav">
+        <h3>My Favorite Topics</h3>
+        <div class="fav-topics">
+            <div class="topic">
+                <img src="Logos/analytics.png" alt="Web Analytics">
+                <section class="bold-topic">Web Analytics</section>
+                <section>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                </section>
+            </div>
+            <div class="topic">
+                <img src="Logos/analytics.png" alt="Web Analytics">
+                <section class=" bold-topic">Web Analytics</section>
+                <section>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star" class="star"></ion-icon>
+                    <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Developed With </p>
+            <ion-icon class="heart" name="heart"></ion-icon>
+            <p>&copy; 2023</p>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+body {
+  background-color: var(--bg_body);
+  position: relative;
+}
+.container-details {
+  padding: 15px 20%;
+}
+.detail {
+  background-color: #333;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.text-color {
+  color: #ededed;
+}
+.title-color {
+  color: var(--brand-secondary);
+  font-weight: 600;
+}
+.text-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 0;
+}
+.card {
+  background-color: #fff;
+  width: 20rem;
+  height: fit-content;
+  position: absolute;
+  margin-top: 15px;
+  right: 20%;
+  border: 2px solid #fff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+.card-outside {
+  color: black;
+}
+.card-outside-details{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.fav-card{
+    padding: 15px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-button{
+    padding: 15px 11px;
+    background-color: var(--brand-secondary);
+    border: none;
+    outline: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.Credits{
+    opacity: 0.5;
+    text-align: center;
+}
+.heart-card{
+    color: #fff;
+}
+.card a {
+  color: rgb(16, 132, 171);
+}
+
+.card img {
+  width: 100%;
+}
+.topics {
+  border: 1px solid var(--lines-color);
+  border-radius: 5px;
+  width: 60%;
+  background-color: var(--bg_default);
+}
+.topics_subtitles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  border-top: 1px solid var(--lines-color);
+}
+.icon-color {
+  color: var(--brand-secondary);
+}
+.topics-padding {
+  padding: 10px 20px;
+}
+
+@media (width <1215px) {
+  .text-container,
+  .topics {
+    width: 100%;
+  }
+  .detail{
+    flex-direction: column;
+  }
+  .card{
+    position: static;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+}
+@media (width <1350px) {
+    .card {
+        right: 15%;
+      }
+}
+
+@media (width< 600px) {
+    .container-details {
+        padding: 15px 4%;
+      }
+      .detail{
+        justify-content: center;
+        align-items: center;
+    }
+}
