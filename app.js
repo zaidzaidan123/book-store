@@ -12,3 +12,7 @@ fav.onclick=()=>{
         document.getElementById("fav").style.display="none"
     }
 }
+
+const myFunction=()=>{
+    document.location.href ="details.html"
+}
