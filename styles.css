@@ -30,6 +30,7 @@
   background-color: var(--bg_default);
   position: relative;
   z-index: 1;
+  
 }
 
 .header button {
@@ -60,7 +61,7 @@
   top: 0;
   left: -10px;
   rotate: 357deg;
-
+overflow: hidden;
 }
 
 .triangle2 {
@@ -71,6 +72,7 @@
 }
 .welcome-website {
   background-color: var(--bg_default);
+  
 }
 .welcome-sentences {
   display: flex;
@@ -167,6 +169,13 @@ article {
 }
 .bold-topic {
   font-weight: 700;
+  font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .stars-margin {
   margin: 20px 0 10px;
@@ -175,7 +184,13 @@ article {
 .padding-from-pic {
   padding-top: 10px;
   font-size: 0.8rem;
+  overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+  -webkit-box-orient: vertical;
+;
 }
 .author-opacity {
   opacity: 0.5;
