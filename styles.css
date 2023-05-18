@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
   color: var(--body-text);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
