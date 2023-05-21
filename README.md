@@ -2,4 +2,10 @@
 
 # Features
 
-make this website using HTML and CSS and learn more about responsive designs
+make this website using HTML and CSS 
+
+dark mode
+
+responsive designs
+
+flex-box

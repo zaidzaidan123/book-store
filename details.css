@@ -11,19 +11,24 @@ body {
   flex-direction: row;
   gap: 20px;
 }
-.text-color {
+.detail-text {
   color: #ededed;
 }
-.title-color {
+.text-container h1{
+  font-size: 20px;
+}
+.topic-type {
   color: var(--brand-secondary);
   font-weight: 600;
 }
 .text-container {
-  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 15px 0;
+}
+.content-width{
+  width: 60%;
 }
 .card {
   background-color: #fff;
@@ -35,6 +40,13 @@ body {
   border: 2px solid #fff;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
   0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+.card div{
+  display: flex;
+  flex-direction: column;
+}
+.topics_subtitles div{
+  display: flex;
 }
 .card-outside {
   color: black;
@@ -53,15 +65,18 @@ body {
     gap: 10px;
 }
 .card-button{
-    padding: 15px 11px;
+    padding: 9px 5px;
     background-color: var(--brand-secondary);
     border: none;
     outline: none;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #fff;
+}
+.topics_subtitles h4{
+  font-weight: 400;
 }
 .Credits{
     opacity: 0.5;
@@ -69,6 +84,7 @@ body {
 }
 .heart-card{
     color: #fff;
+    font-size: 40px;
 }
 .card a {
   color: rgb(16, 132, 171);
@@ -80,7 +96,6 @@ body {
 .topics {
   border: 1px solid var(--lines-color);
   border-radius: 5px;
-  width: 60%;
   background-color: var(--bg_default);
 }
 .topics_subtitles {
@@ -96,6 +111,12 @@ body {
 .topics-padding {
   padding: 10px 20px;
 }
+.sup-topic{
+  width: 100%;
+}
+.sup-topic h4{
+  text-overflow: ellipsis;
+}
 
 @media (width <1215px) {
   .text-container,
@@ -104,12 +125,11 @@ body {
   }
   .detail{
     flex-direction: column;
+    align-items: center;
   }
   .card{
     position: static;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+
   }
 }
 @media (width <1350px) {
