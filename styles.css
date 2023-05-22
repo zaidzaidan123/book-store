@@ -173,7 +173,7 @@ article {
   display: grid;
   height: 163px;
 }
-.bold-topic {
+.card-topic {
   font-weight: 700;
   font-size: 0.98rem;
   overflow: hidden;
@@ -187,7 +187,7 @@ article {
   margin-top: 20px;
   cursor: pointer;
 }
-.padding-from-pic {
+.card-type {
   font-size: 0.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -196,7 +196,7 @@ article {
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.author-opacity {
+.author {
   opacity: 0.5;
   font-size: 0.9rem;
   display: flex;
