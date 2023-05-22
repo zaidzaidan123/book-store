@@ -152,7 +152,7 @@ article {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 310px;
+  height: 290px;
 }
 .topics-articles article img {
   width: 100%;
@@ -175,12 +175,14 @@ article {
 }
 .card-topic {
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
+  top: -2px;
 }
 .stars-margin {
-  margin-top: 20px;
+  margin-top: 6px;
   cursor: pointer;
 }
 .card-type {
