@@ -184,6 +184,8 @@ article {
 .stars-margin {
   margin-top: 6px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .card-type {
   font-size: 0.8rem;
