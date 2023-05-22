@@ -152,7 +152,7 @@ article {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 290px;
+  height: 310px;
 }
 .topics-articles article img {
   width: 100%;
@@ -170,8 +170,16 @@ article {
 
 .topic-content {
   padding: 15px;
-  display: grid;
   height: 163px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-top {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .card-topic {
   font-weight: 700;
@@ -185,7 +193,6 @@ article {
   margin-top: 6px;
   cursor: pointer;
   display: flex;
-  align-items: center;
 }
 .card-type {
   font-size: 0.8rem;
@@ -197,10 +204,11 @@ article {
   -webkit-box-orient: vertical;
 }
 .author {
-  opacity: 0.5;
+  opacity: 0.7;
   font-size: 0.9rem;
   display: flex;
   align-items: end;
+  margin-top: 20px;
 }
 
 /* main */
