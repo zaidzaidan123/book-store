@@ -152,18 +152,21 @@ main {
 .fav-content {
   padding: 5px;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
 }
 .card-topic-fav {
   height: fit-content;
 }
 .fav-cards img {
-  width: 138px;
+  width: 100%;
   object-fit: cover;
 }
 .favorite-card {
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 0px, rgba(0, 0, 0, 0.23) 0px 1px 3px;
   width: 8.6rem;
+  border: none;
 }
 
 .line-order {
