@@ -7,6 +7,8 @@
   --lines-color: #dddddd;
   --body-text: #333333;
   --heart-color: #dc143c;
+  --bg-detail:#333;
+  --detail-text-static:#ededed
 }
 
 .dark-theme {
