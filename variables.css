@@ -1,4 +1,9 @@
 :root {
+  --bg-detail: #333;
+  --detail-text-static: #ededed;
+}
+
+.light-theme {
   /* Light mode */
   --brand-primary: #0768ac;
   --brand-secondary: #03c180;
@@ -7,8 +12,6 @@
   --lines-color: #dddddd;
   --body-text: #333333;
   --heart-color: #dc143c;
-  --bg-detail:#333;
-  --detail-text-static:#ededed
 }
 
 .dark-theme {

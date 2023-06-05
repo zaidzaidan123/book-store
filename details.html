@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="details.css">
 </head>
 
-<body>
+<body class="light-theme">
     <header>
         <nav class="navbar header d-flex px-md-5 px-3 justify-content-between ">
             <h1 class="navbar-brand logo ">Web Topics</h1>
             <div class="d-flex align-items-center gap-2">
-                <button id="btn" class="btn d-flex align-items-center gap-2 btn-sm icon-button">
-                    <ion-icon name="moon-outline"></ion-icon>
-                    <p class="m-0 d-none d-sm-block">Dark Mode</p>
+                <button id="dark-light" class="btn d-flex align-items-center gap-2 btn-sm icon-button">
+                    <ion-icon id="dark-light-icon" name="moon-outline"></ion-icon>
+                    <p id="dark-light-text" class="m-0 d-none d-sm-block">Dark Mode</p>
                 </button>
                 <button id="fav-button" class="btn d-flex align-items-center  gap-2 btn-sm icon-button">
                     <ion-icon name="heart-outline"></ion-icon>
@@ -29,7 +29,7 @@
             </div>
         </nav>
     </header>
-    <header>
+    <section>
         <div class="welcome-website overflow-hidden">
             <div class="triangle1 "></div>
             <div class="triangle2  "></div>
@@ -40,100 +40,24 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
     <main>
         <section class="course-details details-container d-flex gap-4 flex-wrap">
             <section class="d-flex flex-column gap-4 py-3 content-width">
-                <section>
-                    <h4 class="topic-type">Web Development Languages</h4>
-                    <h1 class="detail-text fs-4 fw-semibold">HTML</h1>
-                    <section class="d-flex">
-                        <ion-icon name="star" class="star"></ion-icon>
-                        <ion-icon name="star" class="star"></ion-icon>
-                        <ion-icon name="star" class="star"></ion-icon>
-                        <ion-icon name="star" class="star"></ion-icon>
-                        <ion-icon name="star-outline" class="star ionicon-fill-none"></ion-icon>
-                    </section>
+                <section id="course-details">
                 </section>
-                <section class="detail-text">HTML (Hypertext Markup Language) is the standard markup language for
-                    creating web pages and other information that can be displayed in a web browser. It provides a
-                    structure for content and defines how it should be displayed on a web page, including text, images,
-                    and multimedia. HTML is essential for creating static web pages and is a foundational technology for
-                    the World Wide Web.</section>
+                <section id="course-description" class="detail-text"></section>
             </section>
             <section class="card rounded-0">
-                <div class="card-content">
-                    <img src="Logos/javascript.jpg" alt="HTML" class="card-img-top rounded-0">
-                    <section class=" d-flex flex-column p-3 gap-2">
-                        <p class="card-title"><b class="">HTML</b> by <a href="">Sarah Smith</a></p>
-                        <section class="fav-card">
-                            <p class="">Interested about this topic? </p>
-                            <button
-                                class="card-button btn rounded-0 border-0 outline-0 d-flex justify-content-around align-items-center text-white ">Add
-                                to Favorites <ion-icon class=" heart-card" name="heart-outline"></ion-icon></button>
-                            <p class=" Credits">Unlimited Credits</p>
-                        </section>
-                    </section>
+                <div id="card-content" class="card-content">
                 </div>
             </section>
         </section>
         <section class="sub-topics ">
             <div class="details-container ">
-                <div class="topics content-width topics-padding ">
-                    <div class="">
-                        <h2 class="fs-4 fw-semibold">HTML Sub Topics</h2>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML syntax and structure</h4>
-                        </div>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center  ">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML elements and attributes</h4>
-                        </div>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center  ">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML forms and input elements</h4>
-                        </div>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center  ">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML tables and lists</h4>
-                        </div>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center  ">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML multimedia elements (audio,video,images)</h4>
-                        </div>
-                    </div>
-                    <div class="topics_subtitles d-flex align-items-center  ">
-                        <div>
-                            <ion-icon name="checkmark-circle-outline" class="icon-color"></ion-icon>
-                        </div>
-                        <div>
-                            <h4>HTML accessibility and semantic markup</h4>
-                        </div>
-                    </div>
-                </div>
+                <div id="sub-topics" class="topics content-width topics-padding ">
 
-            </div>
+                </div>
         </section>
     </main>
     <div class="fav px-3 px-md-5 w-100 pt-3 " id="fav">
@@ -176,7 +100,7 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="/js/details.js"></script>
 </body>
 
 </html>

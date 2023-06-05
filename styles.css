@@ -92,6 +92,9 @@ main {
   background-color: var(--bg_default);
   cursor: pointer;
 }
+.card-anchor{
+  text-decoration: none;
+}
 .card .topic-image {
   height: 150px;
   object-fit: cover;
