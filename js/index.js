@@ -5,6 +5,9 @@ import { dataArray } from "./data.js";
 
 switchMode();
 favorite();
+document.getElementById(
+  "topics-number"
+).innerHTML = `"${dataArray.length}" Web Topics Found`;
 dataArray.map((item) => {
   createCard(item);
 });
