@@ -1,13 +1,9 @@
 import { starsFill } from "../stars.js";
-
 let cards_container = document.getElementById("cards-container");
 
 export const createCard = (obj) => {
   const contentTopType = document.createElement("section");
-  fetch(`https://tap-web-1.herokuapp.com/topics/details/${obj.id}`)
-    .then((res) => res.json())
-    .then((data) => (contentTopType.innerHTML = data.category))
-    .catch((error) => console.log(error));
+  contentTopType.innerHTML = obj.category;
   const col = document.createElement("div");
   const card = document.createElement("a");
   const image = document.createElement("img");
@@ -43,4 +39,5 @@ export const createCard = (obj) => {
   contentTopTopic.innerHTML = obj.topic;
   author.innerHTML = obj.name;
   card.href = `details.html?id=${obj.id}`;
+  document.getElementById("topics-number").className = "fs-3 fw-bold";
 };

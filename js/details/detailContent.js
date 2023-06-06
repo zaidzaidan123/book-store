@@ -1,4 +1,6 @@
 import { starsFill } from "../stars.js";
+import { favoriteDisplay } from "../fav.js";
+
 export const detailsContent = (id) => {
   fetch(`https://tap-web-1.herokuapp.com/topics/details/${id}`)
     .then((response) => response.json())
@@ -8,6 +10,9 @@ export const detailsContent = (id) => {
       createSupTopics(data.topic, data.subtopics);
     });
 };
+const removeText = "Remove from Favorites";
+const addText = `Add to Favorites <ion-icon class=" heart-card" name="heart-outline"></ion-icon>`;
+let favCards = JSON.parse(localStorage.getItem("favArray"));
 const courseDetails = (data) => {
   const courseDetails = document.getElementById("course-details");
   const courseDescription = document.getElementById("course-description");
@@ -37,7 +42,7 @@ const createFavoriteCard = (data) => {
   const favButton = document.createElement("button");
   const unlimited = document.createElement("p");
 
-  image.src = `/Logos/${data.image}`;
+  image.src = `Logos/${data.image}`;
   image.className = "card-img-top rounded-0";
   image.alt = data.topic;
   cardContent.className = " d-flex flex-column p-3 gap-2";
@@ -50,7 +55,10 @@ const createFavoriteCard = (data) => {
 
   contentTop.innerHTML = `<b class="card-content-detail">${data.topic}</b> by <a href="">${data.name}</a>`;
   insideQuestion.innerHTML = "Interested about this topic?";
-  favButton.innerHTML = `Add to Favorites <ion-icon class=" heart-card" name="heart-outline"></ion-icon>`;
+  favButton.innerHTML = `${
+    !favCards ? addText : favCards.includes(data.id) ? removeText : addText
+  }`;
+  favButton.id = "fav-button-display";
   unlimited.innerHTML = "Unlimited Credits";
 
   card.appendChild(image);
@@ -60,6 +68,8 @@ const createFavoriteCard = (data) => {
   contentInside.appendChild(insideQuestion);
   contentInside.appendChild(favButton);
   contentInside.appendChild(unlimited);
+
+  favButton.addEventListener("click", () => addToFav(data.id));
 };
 
 const createSupTopics = (topic, subTopicsArray) => {
@@ -83,4 +93,21 @@ const createSupTopics = (topic, subTopicsArray) => {
     supTopicsDiv.appendChild(supTopicsIconContainer);
     supTopicsDiv.appendChild(supTopic);
   }
+};
+
+const addToFav = (id) => {
+  favCards = JSON.parse(localStorage.getItem("favArray"));
+  let favCardsAdd = [];
+  if (!favCards) {
+    favCardsAdd.push(id);
+    favCards = [...favCardsAdd];
+  } else if (!favCards.includes(id)) {
+    favCards.push(id);
+  } else {
+    favCards = favCards.filter((element) => element !== id);
+  }
+  localStorage.setItem("favArray", JSON.stringify(favCards));
+  const favButton = document.getElementById("fav-button-display");
+  favButton.innerHTML = `${favCards.includes(id) ? removeText : addText}`;
+  favoriteDisplay();
 };
