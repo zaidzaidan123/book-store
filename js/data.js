@@ -5,24 +5,11 @@ const fetchData = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("An error occurred:", error);
-    throw error;
+    document.getElementById("cards-container").innerHTML =
+      "Something went wrong. Web topics failed to load.";
   } finally {
-    loader.style.display="none"
+    loader.style.display = "none";
   }
 };
 
 export const dataArray = await fetchData();
-
-// const fetchData = async () => {
-//   try {
-//     const response = await fetch("https://api.example.com/data");
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.error("An error occurred:", error);
-//     throw error;
-//   }
-// };
-
-// export const data = await fetchData();

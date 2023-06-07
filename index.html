@@ -40,22 +40,22 @@
             </div>
         </div>
     </section>
-    <main class="px-3 px-md-5 d-flex flex-column gap-4 ">
+    <main class="height-vh px-3 px-md-5 d-flex flex-column gap-4 ">
         <section class="websites-search mt-4 d-flex rounded-3 row m-0">
             <section class="input-search d-flex align-items-center  pe-0 ps-2 gap-3 col-12 col-md-8 py-2">
                 <ion-icon name="search-outline" class="icon ps-3"></ion-icon>
-                <input type="text" id="websiteFilter" class="search w-100" placeholder="Search the website...">
+                <input type="text" id="searchInput" class="search w-100" placeholder="Search the website...">
             </section>
             <section class="col p-2 border-search left-border">
                 <p>Sort By:</p>
                 <select name="sort" id="sort" class=" select-group border-0 w-100 ">
-                    <option value="default">Default</option>
+                    <option value="default" selected>Default</option>
                 </select>
             </section>
             <section class="col p-2 border-search">
                 <p>Filter By:</p>
                 <select name="filter" id="filter" class=" select-group border-0 w-100 ">
-                    <option value="default">Default</option>
+                    <option value="default" selected>Default</option>
                 </select>
             </section>
         </section>
@@ -63,7 +63,7 @@
             <h2 id="topics-number"></h2>
         </section>
 
-        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
+        <section class=" row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
             id="cards-container">
         </section>
     </main>

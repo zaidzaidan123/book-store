@@ -8,7 +8,11 @@ export const detailsContent = (id) => {
       courseDetails(data);
       createFavoriteCard(data);
       createSupTopics(data.topic, data.subtopics);
-    });
+    })
+    .catch(() => {
+      document.querySelector("main").innerHTML =
+        "Something went wrong. Web topics failed to load.";
+    })
 };
 const removeText = "Remove from Favorites";
 const addText = `Add to Favorites <ion-icon class=" heart-card" name="heart-outline"></ion-icon>`;
