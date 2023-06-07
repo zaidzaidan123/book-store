@@ -37,7 +37,7 @@ const filter = (editArray, selectFilter) => {
   return editArray.filter((element) => element.category === selectFilter);
 };
 const applySearchFilter = (searchValue) => {
-  fetch(`https://tap-web-1.dherokuapp.com/topics/list?phrase=${searchValue}`)
+  fetch(`https://tap-web-1.herokuapp.com/topics/list?phrase=${searchValue}`)
     .then((res) => res.json())
     .then((data) => {
       let filteredArray = filter(
