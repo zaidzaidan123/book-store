@@ -19,7 +19,7 @@ export const favoriteDisplay = () => {
       card.className = "favorite-card";
       image.src = `Logos/${information.image}`;
       image.alt = `${information.topic}`;
-      image.className = "rounded-top";
+      image.className = "rounded-top bg-white";
       favContent.className = "fav-content d-flex flex-column";
       topic.className = "card-topic card-topic-fav";
       starsContainer.className = "d-flex";

@@ -20,7 +20,6 @@ import {
   filterMenu();
   displayCards(dataArray);
 })();
-let editArray = [...dataArray];
 let search = document.getElementById("searchInput");
 let selectSort = document.getElementById("sort");
 let selectFilter = document.getElementById("filter");
@@ -31,14 +30,9 @@ search.addEventListener("input", (e) => {
 });
 
 selectSort.addEventListener("change", () => {
-  let selectedValue = selectSort.value;
-  let filteredArray = filter([...dataArray], selectFilter.value);
-  editArray = sort([...filteredArray], selectedValue);
-  displayCards(editArray);
+  debounce(applySearchFilter(search.value), 300);
 });
 
 selectFilter.addEventListener("change", () => {
-  let selectedValue = selectFilter.value;
-  editArray = filter([...dataArray], selectedValue);
-  displayCards(editArray);
+  debounce(applySearchFilter(search.value), 300);
 });
