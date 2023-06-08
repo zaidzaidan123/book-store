@@ -34,7 +34,7 @@ export const createCard = (obj) => {
 
   starsFill(contentStars, obj.rating);
 
-  image.src = `/Logos/${obj.image}`;
+  image.src = `Logos/${obj.image}`;
   image.alt = obj.topic;
   contentTopTopic.innerHTML = obj.topic;
   author.innerHTML = obj.name;

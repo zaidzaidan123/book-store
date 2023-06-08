@@ -1,5 +1,5 @@
-import { dataArray } from "./data.js";
-import { createCard } from "./main/topicsListing.js";
+import { dataArray } from "../data.js";
+import { createCard } from "./topicsListing.js";
 let editArray = [...dataArray];
 const filterMenu = () => {
   let catagories = [...new Set(dataArray.map((element) => element.category))];

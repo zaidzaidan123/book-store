@@ -1,5 +1,5 @@
 import { starsFill } from "../stars.js";
-import { favoriteDisplay } from "../fav.js";
+import { favoriteDisplay } from "../header/favDisplay.js";
 
 export const detailsContent = (id) => {
   fetch(`https://tap-web-1.herokuapp.com/topics/details/${id}`)

@@ -1,5 +1,5 @@
-import { dataArray } from "./data.js";
-import { starsFill } from "./stars.js";
+import { dataArray } from "../data.js";
+import { starsFill } from "../stars.js";
 
 export const favoriteDisplay = () => {
   let favArray = JSON.parse(localStorage.getItem("favArray"));

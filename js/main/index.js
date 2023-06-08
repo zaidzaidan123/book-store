@@ -1,15 +1,13 @@
-import { switchMode } from "./header/darkMode.js";
-import { favorite } from "./header/favorite.js";
-import { favoriteDisplay } from "./fav.js";
-import { dataArray } from "./data.js";
+import { switchMode } from "../header/darkMode.js";
+import { favorite } from "../header/favorite.js";
+import { favoriteDisplay } from "../header/favDisplay.js";
+import { dataArray } from "../data.js";
 import {
   sortMenu,
   filterMenu,
   debounce,
   displayCards,
   applySearchFilter,
-  sort,
-  filter,
 } from "./filterCards.js";
 
 (function () {
