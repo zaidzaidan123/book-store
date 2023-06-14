@@ -1,0 +1,6 @@
+.footer_content {
+    height: 80px;
+    background-color: var(--bg_body);
+    gap: 5px;
+    margin-top: -2px;
+  }

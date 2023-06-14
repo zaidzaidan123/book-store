@@ -1,0 +1,30 @@
+.select_group {
+  border: none;
+  background-color: var(--bg_default);
+}
+.border_search {
+    border-left: 1px solid var(--lines-color);
+  }
+.websites_search {
+  background-color: var(--bg_default);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+.input_search .search {
+  border: none;
+  outline: none;
+  background-color: var(--bg_default);
+}
+.websites_search p {
+  font-size: 10px;
+  padding: 0 4px;
+}
+
+@media (width <768px) {
+    .border_search {
+      border-top: 1px solid var(--lines-color);
+    }
+    .left_border {
+      border-left: none;
+    }
+  }

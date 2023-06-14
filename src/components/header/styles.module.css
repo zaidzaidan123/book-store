@@ -1,0 +1,18 @@
+.logo {
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+}
+.header {
+  height: 60px;
+  background-color: var(--bg_default);
+  position: relative;
+  z-index: 1;
+}
+.icon_button {
+    border: 1px solid var(--lines-color);
+  }
+.icon_button:hover{
+    border-color:var(--lines-color) ;
+}
