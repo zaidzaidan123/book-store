@@ -9,6 +9,7 @@ const Stars = ({ rate }) => {
           name="star"
           className={styles.star}
           style={{ color: "orange" }}
+          key={i}
         ></ion-icon>
       );
     else {
@@ -17,6 +18,7 @@ const Stars = ({ rate }) => {
           name="star-outline"
           className={styles.star + " ionicon-fill-none"}
           style={{ color: "orange" }}
+          key={i}
         ></ion-icon>
       );
     }

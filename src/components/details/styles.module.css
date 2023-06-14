@@ -1,0 +1,22 @@
+body {
+  background-color: var(--bg_body);
+  position: relative;
+}
+.details_container {
+  padding: 15px 20%;
+}
+.course_details {
+  background-color: var(--bg-detail);
+}
+
+
+@media (width <1215px) {
+  .course_details {
+    justify-content: center;
+  }
+}
+@media (width< 600px) {
+  .details_container {
+    padding: 15px 4%;
+  }
+}

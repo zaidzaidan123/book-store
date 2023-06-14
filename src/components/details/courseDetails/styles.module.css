@@ -1,0 +1,19 @@
+.content_width {
+  width: 60%;
+}
+.detail_text {
+  color: var(--detail-text-static);
+}
+.topic_type {
+    color: var(--brand-secondary);
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+@media (width <1215px) {
+  .content_width {
+    width: 100%;
+  }
+  .course_details {
+    justify-content: center;
+  }
+}

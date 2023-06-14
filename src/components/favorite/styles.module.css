@@ -1,0 +1,44 @@
+.fav {
+  z-index: 11;
+  background-color: var(--bg_default);
+  position: fixed;
+  bottom: 0;
+  height: 195px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+
+.fav_cards {
+  gap: 20px;
+  padding-bottom: 15px;
+}
+.favorite_card {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 0px, rgba(0, 0, 0, 0.23) 0px 1px 3px;
+  width: 8.4rem;
+  border: none;
+}
+.fav_content {
+  padding: 6px 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+.card_topic_fav {
+    height: fit-content;
+}
+
+.card_topic {
+    font-weight: 700;
+    font-size: 0.97rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+
+.fav_cards img {
+    width: 100%;
+    object-fit: cover;
+    height: 70px;
+}

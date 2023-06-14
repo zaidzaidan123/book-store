@@ -1,18 +1,8 @@
 import "./App.css";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import { MainContent } from "./components/mainContent/MainContent";
-import WelcomeWebsite from "./components/welcomeWebsite/WelcomeWebsite";
+import Router from "./components/router/Router";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <WelcomeWebsite />
-      <MainContent />
-      <Footer/>
-    </>
-  );
+  return <Router />;
 }
 
 export default App;
