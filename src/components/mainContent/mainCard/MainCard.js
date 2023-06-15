@@ -7,7 +7,7 @@ const Card = ({ cardContent }) => {
   return (
     <div className="col">
       <Link to={`details/${cardContent.id}`} className={styles.card_anchor}>
-        <div className={styles.card + " border-0 " + styles.card_anchor}>
+        <div className={styles.card + " border-0 rounded " + styles.card_anchor}>
           <img
             src={`TopicsPictures/${cardContent.image}`}
             alt={cardContent.topic}
