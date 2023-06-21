@@ -1,8 +1,13 @@
 import "./App.css";
-import Router from "./components/router/Router";
+import LayOut from "./components/router/Router";
+import { DarkModeProvider } from "./context";
 
 function App() {
-  return <Router />;
+  return (
+    <DarkModeProvider>
+      <LayOut />
+    </DarkModeProvider>
+  );
 }
 
 export default App;

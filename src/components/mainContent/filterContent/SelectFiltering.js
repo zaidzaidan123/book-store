@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-const SelectFiltering = ({ type }) => {
+const SelectFiltering = ({ type, handleChange, options }) => {
   return (
     <section
       className={`col p-2 ${styles.border_search} ${
@@ -12,8 +12,24 @@ const SelectFiltering = ({ type }) => {
         name={type.toLowerCase()}
         id={type.toLowerCase()}
         className={styles.select_group + " border-0 w-100 "}
+        onChange={handleChange}
       >
         <option value="default">Default</option>
+        {type === "Sort"
+          ? options.sort.map((item, key) => {
+              return (
+                <option value={item} key={key}>
+                  {item}
+                </option>
+              );
+            })
+          : options.filter.map((item, key) => {
+              return (
+                <option value={item} key={key}>
+                  {item}
+                </option>
+              );
+            })}
       </select>
     </section>
   );
