@@ -14,7 +14,7 @@ const Favorite = () => {
               return (
                 <div className={styles.favorite_card} key={item.id}>
                   <img
-                    src={`/TopicsPictures/${item.image}`}
+                    src={`../TopicsPictures/${item.image}`}
                     alt={item.topic}
                     className="rounded-top bg-white"
                   />

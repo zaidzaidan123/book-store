@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 const DetailsCard = ({ image, topic, name, rating, id }) => {
   const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
   const handleAddingToFavorites = () => {
+    console.log(favoriteCards.cards)
     if (!favoriteCards.cards.some((item) => id === item.id)) {
       setFavoriteCards((prev) => {
         const updatedValues = [...prev.cards, { image, topic, rating, id }];
@@ -22,7 +23,7 @@ const DetailsCard = ({ image, topic, name, rating, id }) => {
     <section className={"rounded-0 " + styles.card}>
       <div className={styles.card_content}>
         <img
-          src={`/TopicsPictures/${image}`}
+          src={`../TopicsPictures/${image}`}
           alt={topic}
           className="card-img-top rounded-0"
         />

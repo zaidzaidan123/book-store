@@ -34,6 +34,7 @@ const DetailsPage = () => {
           topic={courseDetails.post.topic}
           description={courseDetails.post.description}
         />
+        {console.log(courseDetails.post.image)}
         <DetailsCard
           image={courseDetails.post.image}
           topic={courseDetails.post.topic}

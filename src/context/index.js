@@ -21,10 +21,8 @@ export const DarkModeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(darkData);
   const [favoriteCards, setFavoriteCards] = useState({
     check: false,
-    cards: JSON.parse(localStorage.getItem("favCards")) 
+    cards: JSON.parse(localStorage.getItem("favCards")) || [],
   });
-
-
 
   return (
     <HeaderContext.Provider

@@ -5,7 +5,7 @@ import DetailsPage from "../../Pages/Details/DetailsPage";
 import SharedLayout from "../../sharedLayout/SharedLayout";
 const LayOut = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route element={<SharedLayout />}>
           <Route exact path="/" element={<MainContent />} />

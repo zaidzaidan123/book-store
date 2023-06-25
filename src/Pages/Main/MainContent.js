@@ -17,7 +17,7 @@ export const MainContent = () => {
   const [search, setSearch] = useState("");
   const [searchArray, setSearchArray] = useState([]);
 
-  const debouncedSearchedTerm = useDebounce(search,300);
+  const debouncedSearchedTerm = useDebounce(search, 300);
 
   useEffect(() => {
     const fetchApi = async () => {
