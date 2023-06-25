@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { HeaderContext } from "../../../context";
 import styles from "./styles.module.css";
-const DetailsCard = ({ image, topic, name }) => {
+const DetailsCard = ({ image, topic, name, rating, id }) => {
+  const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
+  const handleAddingToFavorites = () => {
+    console.log(favoriteCards.cards)
+    if (!favoriteCards.cards.some((item) => id === item.id)) {
+      setFavoriteCards((prev) => {
+        const updatedValues = [...prev.cards, { image, topic, rating, id }];
+        localStorage.setItem("favCards", JSON.stringify(updatedValues));
+        return { ...prev, cards: updatedValues };
+      });
+    } else {
+      setFavoriteCards((prev)=>{
+        const updatedCards = prev.cards.filter((item) => item.id !== id);
+        localStorage.setItem("favCards", JSON.stringify(updatedCards));
+        return { ...prev, cards: updatedCards };
+      });
+    }
+  };
   return (
     <section className={"rounded-0 " + styles.card}>
       <div className={styles.card_content}>
         <img
-          src={`/TopicsPictures/${image}`}
+          src={`../TopicsPictures/${image}`}
           alt={topic}
           className="card-img-top rounded-0"
         />
@@ -23,13 +41,22 @@ const DetailsCard = ({ image, topic, name }) => {
                 styles.card_button +
                 " btn rounded-0 border-0 outline-0 d-flex justify-content-around align-items-center text-white "
               }
+              onClick={handleAddingToFavorites}
             >
-              Add to Favorites{" "}
-              <ion-icon
-                className={styles.heart_card + " md hydrated"}
-                name="heart-outline"
-                style={{ color: "white", fontSize: "40px" }}
-              ></ion-icon>
+              {favoriteCards.cards.some((item) => {
+                return item.id === id;
+              }) ? (
+                "Remove From Favorites"
+              ) : (
+                <>
+                  Add to Favorites{" "}
+                  <ion-icon
+                    className={styles.heart_card + " md hydrated"}
+                    name="heart-outline"
+                    style={{ color: "white", fontSize: "40px" }}
+                  ></ion-icon>
+                </>
+              )}
             </button>
             <p className={styles.card_content_detail + " " + styles.Credits}>
               Unlimited Credits

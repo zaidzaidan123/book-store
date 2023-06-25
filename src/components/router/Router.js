@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SharedLayout from "../sharedLayout/SharedLayout";
-import { MainContent } from "../mainContent/MainContent";
-import DetailsPage from "../details/DetailsPage";
-const Router = () => {
+import { MainContent } from "../../Pages/Main/MainContent";
+import DetailsPage from "../../Pages/Details/DetailsPage";
+import SharedLayout from "../../sharedLayout/SharedLayout";
+const LayOut = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route element={<SharedLayout />}>
           <Route exact path="/" element={<MainContent />} />
@@ -16,4 +16,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default LayOut;

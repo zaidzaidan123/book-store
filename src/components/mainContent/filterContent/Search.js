@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-const Search = () => {
+const Search = ({search,handleChangeSearch}) => {
   return (
     <section
       className={
@@ -11,9 +11,10 @@ const Search = () => {
       <ion-icon name="search-outline" className="icon ps-3"></ion-icon>
       <input
         type="text"
-        id="websiteFilter"
+        value={search}
         className={styles.search + " w-100"}
         placeholder="Search the website..."
+        onChange={handleChangeSearch}
       />
     </section>
   );
