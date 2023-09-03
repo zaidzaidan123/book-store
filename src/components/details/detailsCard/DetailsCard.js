@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
 import { HeaderContext } from "../../../context";
 import styles from "./styles.module.css";
-const DetailsCard = ({ image, topic, name, rating, id }) => {
+const DetailsCard = ({ image, topic, name, id }) => {
   const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
   const handleAddingToFavorites = () => {
-    console.log(favoriteCards.cards)
     if (!favoriteCards.cards.some((item) => id === item.id)) {
       setFavoriteCards((prev) => {
-        const updatedValues = [...prev.cards, { image, topic, rating, id }];
+        const updatedValues = [...prev.cards, { image, topic, id }];
         localStorage.setItem("favCards", JSON.stringify(updatedValues));
         return { ...prev, cards: updatedValues };
       });
     } else {
-      setFavoriteCards((prev)=>{
+      setFavoriteCards((prev) => {
         const updatedCards = prev.cards.filter((item) => item.id !== id);
         localStorage.setItem("favCards", JSON.stringify(updatedCards));
         return { ...prev, cards: updatedCards };
@@ -22,19 +21,15 @@ const DetailsCard = ({ image, topic, name, rating, id }) => {
   return (
     <section className={"rounded-0 " + styles.card}>
       <div className={styles.card_content}>
-        <img
-          src={`../TopicsPictures/${image}`}
-          alt={topic}
-          className="card-img-top rounded-0"
-        />
+        <img src={image} alt={topic} className="card-img-top rounded-0" />
         <section className=" d-flex flex-column p-3 gap-2">
           <p className={styles.card_content_detail}>
             <b className={styles.card_content_detail}>{topic}</b> by{" "}
-            <a href="/">{name}</a>
+            <a href="">{name}</a>
           </p>
           <section className={styles.fav_card}>
             <p className={styles.card_content_detail}>
-              Interested about this topic?{" "}
+              Interested about this Book?{" "}
             </p>
             <button
               className={
@@ -48,14 +43,7 @@ const DetailsCard = ({ image, topic, name, rating, id }) => {
               }) ? (
                 "Remove From Favorites"
               ) : (
-                <>
-                  Add to Favorites{" "}
-                  <ion-icon
-                    className={styles.heart_card + " md hydrated"}
-                    name="heart-outline"
-                    style={{ color: "white", fontSize: "40px" }}
-                  ></ion-icon>
-                </>
+                <>Add to Favorites </>
               )}
             </button>
             <p className={styles.card_content_detail + " " + styles.Credits}>

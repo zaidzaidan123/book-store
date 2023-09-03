@@ -1,11 +1,12 @@
-import React from 'react'
-import styles from "./styles.module.css"
+import React from "react";
 const Loader = () => {
   return (
-    <div className={styles.loaderWidth}>
-        <div className={styles.loader}></div>
+    <div className="d-flex justify-content-center">
+      <div className="spinner-border text-dark" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

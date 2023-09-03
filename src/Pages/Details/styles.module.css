@@ -1,9 +1,8 @@
 body {
   background-color: var(--bg_body);
-  position: relative;
 }
 .details_container {
-  padding: 15px 20%;
+  padding: 15px 10%;
 }
 .course_details {
   background-color: var(--bg-detail);

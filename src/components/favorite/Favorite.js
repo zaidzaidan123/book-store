@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { HeaderContext } from "../../context";
-import Stars from "../commonComponents/stars/Stars";
 import styles from "./styles.module.css";
 const Favorite = () => {
   const { favoriteCards } = useContext(HeaderContext);
@@ -28,7 +27,6 @@ const Favorite = () => {
                     >
                       {item.topic}
                     </section>
-                    <Stars rate={item.rating} />
                   </section>
                 </div>
               );

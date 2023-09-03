@@ -1,32 +1,10 @@
-import React, { useCallback, useContext } from "react";
+import React, { useContext } from "react";
 import styles from "./styles.module.css";
 import Logo from "./Logo";
-import Button from "./Button";
 import { HeaderContext } from "../../context";
+import { Link } from "react-router-dom";
 const Header = () => {
-  const { darkMode, setDarkMode, favoriteCards, setFavoriteCards } =
-    useContext(HeaderContext);
-  document.body.className =
-    localStorage.getItem("dark-toggle") || "light-theme";
-  const handleDarkButton = useCallback(() => {
-    if (darkMode.check) {
-      setDarkMode({
-        check: false,
-        text: "Light Mode",
-        icon: "sunny",
-      });
-      document.body.className = localStorage.getItem("dark-toggle");
-      localStorage.setItem("dark-toggle", "dark-theme");
-    } else {
-      setDarkMode({
-        check: true,
-        text: "Dark Mode",
-        icon: "moon",
-      });
-      document.body.className = localStorage.getItem("dark-toggle");
-      localStorage.setItem("dark-toggle", "light-theme");
-    }
-  }, [darkMode, setDarkMode]);
+  const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
   const handleFavDisplay = () => {
     setFavoriteCards({ ...favoriteCards, check: !favoriteCards.check });
   };
@@ -37,14 +15,20 @@ const Header = () => {
         " navbar header d-flex px-md-5 px-3 justify-content-between "
       }
     >
-      <Logo logo="Web Topics" />
+      <Link to={`/`} style={{ textDecoration: "none" }}>
+        <Logo logo="Book Store" />
+      </Link>
       <div className="d-flex align-items-center gap-2">
-        <Button
-          text={darkMode.text}
-          icon={darkMode.icon}
-          handleButton={handleDarkButton}
-        />
-        <Button text="Favorites" icon="heart" handleButton={handleFavDisplay} />
+        <button
+          className={
+            styles.icon_button +
+            " btn d-flex align-items-center gap-2 btn-sm icon-button"
+          }
+          onClick={handleFavDisplay}
+        >
+          <ion-icon name={"heart-outline"}></ion-icon>
+          <p className="m-0 d-none d-sm-block">Favorites</p>
+        </button>
       </div>
     </nav>
   );

@@ -2,7 +2,6 @@
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1),
     0px 1px 3px 0px rgba(0, 0, 0, 0.08);
 
-  cursor: pointer;
   background-color: var(--bg_default);
 }
 .card_anchor {
@@ -30,18 +29,18 @@
 }
 .card_topic {
   font-weight: 700;
-  font-size: 0.97rem;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card_tag {
+  font-size: 0.9rem;
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
   top: -2px;
   height: 48px;
-}
-.card_type {
-  font-size: 0.8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .line_order {
   display: -webkit-box;

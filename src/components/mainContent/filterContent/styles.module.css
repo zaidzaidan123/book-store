@@ -1,7 +1,4 @@
-.select_group {
-  border: none;
-  background-color: var(--bg_default);
-}
+
 .border_search {
     border-left: 1px solid var(--lines-color);
   }
@@ -20,11 +17,3 @@
   padding: 0 4px;
 }
 
-@media (width <768px) {
-    .border_search {
-      border-top: 1px solid var(--lines-color);
-    }
-    .left_border {
-      border-left: none;
-    }
-  }
