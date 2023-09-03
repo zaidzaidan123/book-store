@@ -44,7 +44,7 @@ const EditDelete = ({ id }) => {
         title={"Delete A Book"}
         buttonName={"Delete"}
         message={"Are you Sure you want to delete this book ????"}
-        handleDeleteBook={handleDeleteBook}
+        handleFunction={handleDeleteBook}
       />
     </section>
   );

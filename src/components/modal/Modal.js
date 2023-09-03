@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ title, buttonName, message, handleDeleteBook }) => {
+const Modal = ({ title, buttonName, message, handleFunction }) => {
   return (
     <div
       class="modal fade"
@@ -34,7 +34,7 @@ const Modal = ({ title, buttonName, message, handleDeleteBook }) => {
             <button
               type="button"
               class="btn btn-primary"
-              onClick={handleDeleteBook}
+              onClick={handleFunction}
               data-bs-dismiss="modal"
             >
               {buttonName}
