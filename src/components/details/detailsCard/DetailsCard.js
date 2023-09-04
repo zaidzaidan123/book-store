@@ -1,23 +1,7 @@
-import React, { useContext } from "react";
-import { HeaderContext } from "../../../context";
+import React from "react";
 import styles from "./styles.module.css";
 const DetailsCard = ({ image, topic, name, id }) => {
-  const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
-  const handleAddingToFavorites = () => {
-    if (!favoriteCards.cards.some((item) => id === item.id)) {
-      setFavoriteCards((prev) => {
-        const updatedValues = [...prev.cards, { image, topic, id }];
-        localStorage.setItem("favCards", JSON.stringify(updatedValues));
-        return { ...prev, cards: updatedValues };
-      });
-    } else {
-      setFavoriteCards((prev) => {
-        const updatedCards = prev.cards.filter((item) => item.id !== id);
-        localStorage.setItem("favCards", JSON.stringify(updatedCards));
-        return { ...prev, cards: updatedCards };
-      });
-    }
-  };
+  
   return (
     <section className={"rounded-0 " + styles.card}>
       <div className={styles.card_content}>
@@ -31,7 +15,7 @@ const DetailsCard = ({ image, topic, name, id }) => {
             <p className={styles.card_content_detail}>
               Interested about this Book?{" "}
             </p>
-            <button
+            {/* <button
               className={
                 styles.card_button +
                 " btn rounded-0 border-0 outline-0 d-flex justify-content-around align-items-center text-white "
@@ -45,7 +29,7 @@ const DetailsCard = ({ image, topic, name, id }) => {
               ) : (
                 <>Add to Favorites </>
               )}
-            </button>
+            </button> */}
             <p className={styles.card_content_detail + " " + styles.Credits}>
               Unlimited Credits
             </p>

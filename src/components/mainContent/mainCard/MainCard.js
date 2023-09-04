@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToFav } from "../../../store/favSlice";
 const Card = ({ cardContent }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="col">
       <div className={`${styles.card} border-0 rounded ${styles.card_anchor}`}>
@@ -20,8 +24,13 @@ const Card = ({ cardContent }) => {
             <section
               className={`mb-1 d-flex justify-content-between align-items-center`}
             >
-              <p className={`${styles.card_topic} w-75`}>{cardContent?.title}</p>
-              <button className="border-0 bg-transparent d-flex">
+              <p className={`${styles.card_topic} w-75`}>
+                {cardContent?.title}
+              </p>
+              <button
+                className="border-0 bg-transparent d-flex"
+                onClick={() => dispatch(addToFav(cardContent))}
+              >
                 {cardContent?.favorite ? (
                   <ion-icon name="heart"></ion-icon>
                 ) : (
@@ -37,7 +46,7 @@ const Card = ({ cardContent }) => {
                   if (index < 5) {
                     return " #" + item + " ";
                   }
-                  return null
+                  return null;
                 })}
               </p>
             </section>

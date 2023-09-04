@@ -6,7 +6,7 @@ export const apiSlice = createApi({
   tagTypes: ["Books","Authors"],
   endpoints: (builder) => ({
     getBooks: builder.query({
-      query: () => "/books",
+      query: (search="") => `/books?title_like=${search}`,
       providesTags: ["Books"],
     }),
     addBook: builder.mutation({
@@ -37,10 +37,6 @@ export const apiSlice = createApi({
       query: (id) => `books/${id}`,
       providesTags: ["Books"],
     }),
-    getBooksByPageAndLimit: builder.query({
-      query: (search, pageNum, limit) => `books?title_like=&_page=1&_limit=20`,
-      providesTags: ["Books"],
-    }),
     getAuthors: builder.query({
       query: () => "/authors",
       providesTags: ["Authors"],
@@ -62,7 +58,6 @@ export const {
   useUpdateBookMutation,
   useDeleteBookMutation,
   useGetBookByIdQuery,
-  useGetBooksByPageAndLimitQuery,
   useGetAuthorsQuery,
   useAddAuthorMutation,
 } = apiSlice;

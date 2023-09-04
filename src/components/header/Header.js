@@ -2,7 +2,10 @@ import React from "react";
 import styles from "./styles.module.css";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
+  console.log(cart);
   return (
     <nav
       className={
@@ -22,7 +25,7 @@ const Header = () => {
           }
         >
           {" "}
-          Favorites
+          Favorites {cart?.length}
         </Link>
         <Link
           to="addBook"
