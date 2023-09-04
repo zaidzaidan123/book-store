@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import Logo from "./Logo";
-import { HeaderContext } from "../../context";
 import { Link } from "react-router-dom";
 const Header = () => {
-  const { favoriteCards, setFavoriteCards } = useContext(HeaderContext);
-  const handleFavDisplay = () => {
-    setFavoriteCards({ ...favoriteCards, check: !favoriteCards.check });
-  };
   return (
     <nav
       className={
@@ -19,16 +14,25 @@ const Header = () => {
         <Logo logo="Book Store" />
       </Link>
       <div className="d-flex align-items-center gap-2">
-        <button
+        <Link
+          to="favorite"
           className={
             styles.icon_button +
             " btn d-flex align-items-center gap-2 btn-sm icon-button"
           }
-          onClick={handleFavDisplay}
         >
-          <ion-icon name={"heart-outline"}></ion-icon>
-          <p className="m-0 d-none d-sm-block">Favorites</p>
-        </button>
+          {" "}
+          Favorites
+        </Link>
+        <Link
+          to="addBook"
+          className={
+            styles.icon_button +
+            " btn d-flex align-items-center gap-2 btn-sm icon-button"
+          }
+        >
+          Add Book
+        </Link>
       </div>
     </nav>
   );
