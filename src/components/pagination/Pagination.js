@@ -87,7 +87,7 @@ const Pagination = ({ totalNumber, currentPage, onPageChange }) => {
         )}
         <li
           className={`page-item ${
-            currentPage === totalPageCount ? "disabled" : ""
+            currentPage === totalPageCount || totalPageCount===1 ? "disabled" : ""
           }`}
         >
           <a

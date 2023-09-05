@@ -7,13 +7,17 @@ import Pagination from "../../components/pagination/Pagination";
 import CardsContainer from "../../components/mainContent/cards-container/CardsContainer";
 
 export const MainContent = () => {
+  //to handle the search
   const [search, setSearch] = useState("");
   const debouncedSearchedTerm = useDebounce(search, 300);
+  //get data
   const {
     data: books,
     isLoading,
     isError,
   } = useGetBooksQuery(debouncedSearchedTerm);
+
+  //to handle the pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [booksPerPage] = useState(20);
   const indexOfLastBook = currentPage * booksPerPage;

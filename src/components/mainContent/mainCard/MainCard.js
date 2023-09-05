@@ -1,11 +1,19 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToFav } from "../../../store/favSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToFav, removeFromFav } from "../../../store/favSlice";
 const Card = ({ cardContent }) => {
   const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites);
 
+  const handleAddRemoveFromFav = () => {
+    if (favorites.find((item) => item.id === cardContent?.id)) {
+      dispatch(removeFromFav(cardContent));
+    } else {
+      dispatch(addToFav(cardContent));
+    }
+  };
   return (
     <div className="col">
       <div className={`${styles.card} border-0 rounded ${styles.card_anchor}`}>
@@ -29,12 +37,9 @@ const Card = ({ cardContent }) => {
               </p>
               <button
                 className="border-0 bg-transparent d-flex"
-                onClick={() => {
-                  console.log(cardContent, "cardContent");
-                  dispatch(addToFav(cardContent));
-                }}
+                onClick={handleAddRemoveFromFav}
               >
-                {cardContent?.favorite ? (
+                {favorites.find((item) => item.id === cardContent?.id) ? (
                   <ion-icon name="heart"></ion-icon>
                 ) : (
                   <ion-icon name="heart-outline"></ion-icon>
@@ -56,7 +61,7 @@ const Card = ({ cardContent }) => {
             <section className="d-flex">
               <section className="w-100">
                 <Link
-                  to={`details/${cardContent?.id}`}
+                  to={`/details/${cardContent?.id}`}
                   className={`${styles.card_anchor}`}
                 >
                   <button type="button" class="btn btn-primary w-100">

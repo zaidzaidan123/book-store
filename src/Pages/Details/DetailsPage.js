@@ -5,13 +5,9 @@ import CourseDetails from "../../components/details/courseDetails/CourseDetails"
 import DetailsCard from "../../components/details/detailsCard/DetailsCard";
 import styles from "./styles.module.css";
 import { useGetBookByIdQuery } from "../../api/apiSlice";
-import { useSelector } from 'react-redux';
 const DetailsPage = () => {
-  const books = useSelector((state) => state.books);
   const { id } = useParams();
   const { data: bookDetails, isLoading, isError } = useGetBookByIdQuery(id);
-
-  console.log(books)
 
   if (isLoading) {
     return <Loader />;
@@ -34,6 +30,7 @@ const DetailsPage = () => {
           topic={bookDetails.title}
           name={bookDetails.publisher}
           id={id}
+          cardContent={bookDetails}
         />
         <CourseDetails
           type={bookDetails.isbn}
@@ -41,7 +38,6 @@ const DetailsPage = () => {
           description={bookDetails.description}
           id={id}
         />
-        
       </section>
     </main>
   );

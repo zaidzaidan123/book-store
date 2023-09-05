@@ -4,8 +4,7 @@ import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
-  const favorites = useSelector((state) => state);
-  console.log(favorites);
+  const favorites = useSelector((state) => state.favorites);
   return (
     <nav
       className={
