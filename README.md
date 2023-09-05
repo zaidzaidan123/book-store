@@ -5,7 +5,7 @@
 Before running the application, ensure you have the following dependencies installed:
 
 - Node.js and npm (Node Package Manager)
-- Git (optional but recommended)
+- Git
 
 
 ### Installation
@@ -43,7 +43,7 @@ npm start
 
 
 
-### Features
+## Features
 Home Page: Display a list of books, a real-time search bar, and pagination for the book list.
 
 Book Detail Page: View more details about a book, with edit and delete buttons.
