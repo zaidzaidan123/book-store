@@ -1,30 +1,49 @@
-import React from "react";
+import React,{useState} from "react";
 import Modal from "../modal/Modal";
 import styles from "./styles.module.css";
+import { useAddAuthorMutation } from "../../api/apiSlice";
 
 const Form = ({
   formik,
   authors,
-  firstName,
-  lastName,
-  setFirstName,
-  setLastName,
-  handleAddAuthor,
-  handleImageInputChange,
+  setBase64URL,
   imageRequired = false,
 }) => {
+  const [addAuthor] = useAddAuthorMutation();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const handleAddAuthor = () => {
+    addAuthor({ name: firstName + " " + lastName });
+
+    alert("Your Author has been added to the list search for him to put him");
+  };
+  const handleImageInputChange = (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        const base64URL = e.target.result;
+        setBase64URL(base64URL);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  };
   return (
     <form
       onSubmit={formik.handleSubmit}
       className="w-100 p-md-5 p-3 d-flex flex-column justify-content-center align-items-center"
     >
       <div className="mb-3 w-100">
-        <label for="title" class="form-label">
+        <label for="title" className="form-label">
           Title:
         </label>
         <input
           type="text"
-          class={`form-control ${
+          className={`form-control ${
             formik.errors.title ? styles.input_error : ""
           }`}
           id="title"
@@ -38,7 +57,7 @@ const Form = ({
       </div>
 
       <div className="mb-3 w-100">
-        <label for="authors" class="form-label">
+        <label for="authors" className="form-label">
           Author:
         </label>
         <div className="d-flex gap-5">
@@ -113,8 +132,8 @@ const Form = ({
         )}
       </div>
 
-      <div class="mb-3 w-100">
-        <label for="description" class="form-label">
+      <div className="mb-3 w-100">
+        <label for="description" className="form-label">
           Description:
         </label>
         <textarea
@@ -143,12 +162,12 @@ const Form = ({
         />
       </div>
       <div className="mb-3 w-100">
-        <label for="isbn" class="form-label">
+        <label for="isbn" className="form-label">
           ISBN:
         </label>
         <input
           type="text"
-          class={`form-control`}
+          className={`form-control`}
           id="isbn"
           placeholder="Title"
           value={formik.values.isbn}
@@ -156,12 +175,12 @@ const Form = ({
         />
       </div>
       <div className="mb-3 w-100">
-        <label for="publisher" class="form-label">
+        <label for="publisher" className="form-label">
           Publisher:
         </label>
         <input
           type="text"
-          class={`form-control`}
+          className={`form-control`}
           id="publisher"
           placeholder="Title"
           value={formik.values.publisher}

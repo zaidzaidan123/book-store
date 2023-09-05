@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const favSlice = createSlice({
+const favSlice = createSlice({
   initialState: [],
   name: "favoriteSlice",
   reducers: {

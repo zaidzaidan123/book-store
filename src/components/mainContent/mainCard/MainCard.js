@@ -29,7 +29,10 @@ const Card = ({ cardContent }) => {
               </p>
               <button
                 className="border-0 bg-transparent d-flex"
-                onClick={() => dispatch(addToFav(cardContent))}
+                onClick={() => {
+                  console.log(cardContent, "cardContent");
+                  dispatch(addToFav(cardContent));
+                }}
               >
                 {cardContent?.favorite ? (
                   <ion-icon name="heart"></ion-icon>

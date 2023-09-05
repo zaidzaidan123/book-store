@@ -7,14 +7,14 @@ const Footer = () => {
       <div className="">
         <div className="row">
           <div className="col-md-4">
-            <h5 className="text-black">About Us</h5>
+            <h5 className="text-white">About Us</h5>
             <p className="text-white mb-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               eget justo urna.
             </p>
           </div>
           <div className="col-md-4">
-            <h5 className="text-black">Quick Links</h5>
+            <h5 className="text-white ">Quick Links</h5>
             <ul className="list-unstyled">
               <li>
                 <Link to={"/"} style={{ textDecoration: "none" }}>
@@ -33,7 +33,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4">
-            <h5 className="text-black ">Contact Us</h5>
+            <h5 className="text-white ">Contact Us</h5>
             <address className="text-white">
               Address: Al-Basatin Commercial Complex 7th floor, Al-Basatin Area
               <br />

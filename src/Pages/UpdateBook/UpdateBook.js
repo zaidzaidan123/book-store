@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router";
 import {
   useGetBookByIdQuery,
   useGetAuthorsQuery,
-  useAddAuthorMutation,
   useUpdateBookMutation,
 } from "../../api/apiSlice";
 import { useFormik } from "formik";
@@ -14,11 +13,8 @@ import Form from "../../components/form";
 const UpdateBook = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [base64URL, setBase64URL] = useState("");
   const [updateBook] = useUpdateBookMutation();
-  const [addAuthor] = useAddAuthorMutation();
   const {
     data: bookDetails,
     isLoading: booksLoading,
@@ -77,25 +73,6 @@ const UpdateBook = () => {
       });
     }
   }, [bookDetails, authors]);
-  const handleAddAuthor = () => {
-    addAuthor({ name: firstName + " " + lastName });
-
-    alert("Your Author has been added to the list search for him to put him");
-  };
-  const handleImageInputChange = (e) => {
-    const file = e.target.files[0];
-
-    if (file) {
-      const reader = new FileReader();
-
-      reader.onload = (e) => {
-        const base64URL = e.target.result;
-        setBase64URL(base64URL);
-      };
-
-      reader.readAsDataURL(file);
-    }
-  };
 
   if (booksLoading || authorsLoading) {
     return <Loader />;
@@ -104,18 +81,7 @@ const UpdateBook = () => {
   if (booksIsError || authorsIsError) {
     return <h1>{booksError || authorsError}</h1>;
   }
-  return (
-    <Form
-      formik={formik}
-      authors={authors}
-      firstName={firstName}
-      lastName={lastName}
-      setFirstName={setFirstName}
-      setLastName={setLastName}
-      handleAddAuthor={handleAddAuthor}
-      handleImageInputChange={handleImageInputChange}
-    />
-  );
+  return <Form formik={formik} authors={authors} setBase64URL={setBase64URL} />;
 };
 
 export default UpdateBook;
