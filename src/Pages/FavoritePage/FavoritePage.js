@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const FavoritePage = () => {
   const favorites = useSelector((state) => state.favorites);
   return (
-    <div className="px-3 px-md-5 d-flex flex-column gap-4 mt-4">
+    <div className="px-3 px-md-5 d-flex flex-column gap-4 my-4">
       <CardsContainer books={favorites} booksLength={favorites.length} />
       {/* <Pagination/> */}
     </div>
