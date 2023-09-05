@@ -5,6 +5,7 @@
 Before running the application, ensure you have the following dependencies installed:
 
 - Node.js and npm (Node Package Manager)
+  
 - Git
 
 
@@ -19,9 +20,11 @@ Extract the downloaded file.
 Navigate to the extracted folder using the command line.
 
 Install the server dependencies:
+
 npm install
 
 Run the server:
+
 npm run dev
 
 The server should now be running at a base URL (usually http://localhost:3000).
@@ -33,12 +36,15 @@ Clone the repository to your local machine using Git (or download the ZIP file):
 git clone https://github.com/your-username/bookstore.git
 
 Navigate to the project directory:
+
 cd bookstore
 
 Install project dependencies:
+
 npm install
 
 Start the development server:
+
 npm start
 
 
