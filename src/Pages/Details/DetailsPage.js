@@ -22,7 +22,7 @@ const DetailsPage = () => {
           styles.course_details +
           " " +
           styles.details_container +
-          " d-flex gap-4 flex-wrap"
+          " d-flex gap-4 flex-wrap py-5"
         }
       >
         <DetailsCard

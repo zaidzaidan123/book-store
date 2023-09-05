@@ -1,14 +1,11 @@
-import React,{useState} from "react";
-import Modal from "../modal/Modal";
-import styles from "./styles.module.css";
+import React, { useState } from "react";
 import { useAddAuthorMutation } from "../../api/apiSlice";
+import FormInput from "./formInput";
+import FormImage from "./formImage";
+import FormTextArea from "./formTextArea";
+import FormAuthorsInput from "./formAuthorsInput";
 
-const Form = ({
-  formik,
-  authors,
-  setBase64URL,
-  imageRequired = false,
-}) => {
+const Form = ({ formik, authors, setBase64URL, imageRequired = false }) => {
   const [addAuthor] = useAddAuthorMutation();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -35,158 +32,60 @@ const Form = ({
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className="w-100 p-md-5 p-3 d-flex flex-column justify-content-center align-items-center"
+      className="w-100 p-md-5 p-3 d-flex flex-column justify-content-center align-items-center "
     >
-      <div className="mb-3 w-100">
-        <label for="title" className="form-label">
-          Title:
-        </label>
-        <input
-          type="text"
-          className={`form-control ${
-            formik.errors.title ? styles.input_error : ""
-          }`}
-          id="title"
-          placeholder="Title"
-          value={formik.values.title}
-          onChange={formik.handleChange}
-        />
-        {formik.errors.title && (
-          <p className={styles.error_message}>{formik.errors.title}</p>
-        )}
-      </div>
+      <FormInput
+        value={formik.values.title}
+        handleChange={formik.handleChange}
+        name={"title"}
+        error={formik.errors.title}
+        placeholder={"title"}
+      />
+      <FormAuthorsInput
+        error={formik.errors.author}
+        value={formik.values.author}
+        handleChange={formik.handleChange}
+        authors={authors}
+        firstName={firstName}
+        setFirstName={setFirstName}
+        lastName={lastName}
+        setLastName={setLastName}
+        handleAddAuthor={handleAddAuthor}
+      />
+      <FormInput
+        value={formik.values.tags}
+        handleChange={formik.handleChange}
+        name={"tags"}
+        error={formik.errors.tags}
+        placeholder={"make spaces between words"}
+      />
 
-      <div className="mb-3 w-100">
-        <label for="authors" className="form-label">
-          Author:
-        </label>
-        <div className="d-flex gap-5">
-          <input
-            list="authors"
-            id="author"
-            className={`w-75 form-control ${
-              formik.errors.author ? styles.input_error : ""
-            }`}
-            placeholder="select one"
-            value={formik.values.author}
-            onChange={formik.handleChange}
-          />
-          <datalist id="authors">
-            {authors?.map((item) => {
-              return <option value={item.name} />;
-            })}
-          </datalist>
+      <FormTextArea
+        value={formik.values.description}
+        handleChange={formik.handleChange}
+        name={"description"}
+        error={formik.errors.description}
+      />
 
-          <button
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            className="btn btn-primary w-25"
-            type="button"
-          >
-            Add Author
-          </button>
+      <FormImage
+        handleImageInputChange={handleImageInputChange}
+        imageRequired={imageRequired}
+        name={"image"}
+      />
 
-          <Modal
-            title={"Add Author"}
-            buttonName={"Create Author"}
-            message={
-              <div className="d-flex flex-column gap-1">
-                <label id="firstName">First Name:</label>
-                <input
-                  id="firstName"
-                  className="form-control"
-                  placeholder="First Name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-                <label id="lastName">Last Name:</label>
-                <input
-                  className="form-control"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </div>
-            }
-            handleFunction={handleAddAuthor}
-          />
-        </div>
-        {formik.errors.author && (
-          <p className={styles.error_message}>{formik.errors.author}</p>
-        )}
-      </div>
+      <FormInput
+        value={formik.values.isbn}
+        handleChange={formik.handleChange}
+        name={"isbn"}
+        placeholder={"isbn"}
+      />
 
-      <div className="mb-3 w-100">
-        <label for="tags">Tags:</label>
-        <input
-          className={`form-control ${
-            formik.errors.tags ? styles.input_error : ""
-          }`}
-          id="tags"
-          placeholder="To add multiple tags, leave a space between words"
-          value={formik.values.tags}
-          onChange={formik.handleChange}
-        />
-        {formik.errors.tags && (
-          <p className={styles.error_message}>{formik.errors.tags}</p>
-        )}
-      </div>
-
-      <div className="mb-3 w-100">
-        <label for="description" className="form-label">
-          Description:
-        </label>
-        <textarea
-          className={`form-control ${
-            formik.errors.description ? styles.input_error : ""
-          }`}
-          id="description"
-          rows="3"
-          placeholder="Description"
-          value={formik.values.description}
-          onChange={formik.handleChange}
-        ></textarea>
-        {formik.errors.description && (
-          <p className={styles.error_message}>{formik.errors.description}</p>
-        )}
-      </div>
-      <div className="mb-3 w-100">
-        <label for="image">Image:</label>
-        <input
-          type="file"
-          id="image"
-          className="form-control"
-          accept="image/*"
-          onChange={handleImageInputChange}
-          required={imageRequired}
-        />
-      </div>
-      <div className="mb-3 w-100">
-        <label for="isbn" className="form-label">
-          ISBN:
-        </label>
-        <input
-          type="text"
-          className={`form-control`}
-          id="isbn"
-          placeholder="Title"
-          value={formik.values.isbn}
-          onChange={formik.handleChange}
-        />
-      </div>
-      <div className="mb-3 w-100">
-        <label for="publisher" className="form-label">
-          Publisher:
-        </label>
-        <input
-          type="text"
-          className={`form-control`}
-          id="publisher"
-          placeholder="Title"
-          value={formik.values.publisher}
-          onChange={formik.handleChange}
-        />
-      </div>
+      <FormInput
+        value={formik.values.publisher}
+        handleChange={formik.handleChange}
+        name={"publisher"}
+        placeholder={"publisher"}
+      />
 
       <button type="submit" className="btn btn-primary">
         Submit

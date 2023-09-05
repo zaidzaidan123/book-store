@@ -3,6 +3,7 @@
   background-color:var(--brand-primary);
   color: #fff;
   padding: 30px 0;
+  margin-top: auto;
 }
 
 .footer h5 {

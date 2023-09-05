@@ -1,10 +1,9 @@
-import { current } from "@reduxjs/toolkit";
 import React from "react";
 
 const Pagination = ({ totalNumber, currentPage, onPageChange }) => {
   const totalPageCount = Math.ceil(totalNumber / 20);
   const showPagesBeforeAndAfter = 1;
-  
+
   // Calculate the range of pages to display
   let startPage = Math.max(currentPage - showPagesBeforeAndAfter, 1);
   let endPage = Math.min(currentPage + showPagesBeforeAndAfter, totalPageCount);
@@ -27,26 +26,23 @@ const Pagination = ({ totalNumber, currentPage, onPageChange }) => {
     <nav aria-label="Page navigation">
       <ul className="pagination">
         <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-          <a
+          <button
             className="page-link"
-            href="#"
             onClick={() => onPageChange(currentPage - 1)}
           >
-        <span aria-hidden="true">&laquo;</span>
-          </a>
+            <span aria-hidden="true">&laquo;</span>
+          </button>
         </li>
         {startPage > 1 && (
           <li className={`page-item ${currentPage === 1 ? "active" : ""}`}>
-            <a className="page-link" href="#" onClick={() => onPageChange(1)}>
+            <button className="page-link" onClick={() => onPageChange(1)}>
               1
-            </a>
+            </button>
           </li>
         )}
         {startPage > 2 && (
           <li className="page-item disabled">
-            <a className="page-link" href="#">
-              ...
-            </a>
+            <button className="page-link">...</button>
           </li>
         )}
         {pageNumbers.map((page) => (
@@ -54,20 +50,14 @@ const Pagination = ({ totalNumber, currentPage, onPageChange }) => {
             key={page}
             className={`page-item ${currentPage === page ? "active" : ""}`}
           >
-            <a
-              className="page-link"
-              href="#"
-              onClick={() => onPageChange(page)}
-            >
+            <button className="page-link" onClick={() => onPageChange(page)}>
               {page}
-            </a>
+            </button>
           </li>
         ))}
         {endPage < totalPageCount && (
           <li className="page-item disabled">
-            <a className="page-link" href="#">
-              ...
-            </a>
+            <button className="page-link">...</button>
           </li>
         )}
         {endPage < totalPageCount && (
@@ -76,27 +66,29 @@ const Pagination = ({ totalNumber, currentPage, onPageChange }) => {
               currentPage === totalPageCount ? "active" : ""
             }`}
           >
-            <a
+            <button
               className="page-link"
-              href="#"
               onClick={() => onPageChange(totalPageCount)}
             >
               {totalPageCount}
-            </a>
+            </button>
           </li>
         )}
         <li
           className={`page-item ${
-            currentPage === totalPageCount || totalPageCount===1 ? "disabled" : ""
+            currentPage === totalPageCount ||
+            totalPageCount === 1 ||
+            totalNumber === 0
+              ? "disabled"
+              : ""
           }`}
         >
-          <a
+          <button
             className="page-link"
-            href="#"
             onClick={() => onPageChange(currentPage + 1)}
           >
             <span aria-hidden="true">&raquo;</span>{" "}
-          </a>
+          </button>
         </li>
       </ul>
     </nav>

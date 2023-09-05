@@ -4,3 +4,23 @@
 .error_message{
 color:red
 }
+.input_width{
+    width: 100%;
+}
+@media (min-width: 500px) {
+    .input_width{
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .input_width{
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .input_width{
+        width: 50%;
+    }
+}

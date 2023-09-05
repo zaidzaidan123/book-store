@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
@@ -6,9 +6,7 @@ import { useSelector } from "react-redux";
 import VerticalNav from "./verticalNav";
 
 const Header = () => {
-  const [navDisplay, setNavDisplay] = useState(false);
   const favorites = useSelector((state) => state.favorites);
-  console.log(navDisplay)
   return (
     <nav
       className={
