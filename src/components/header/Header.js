@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import VerticalNav from "./verticalNav";
+
 const Header = () => {
+  const [navDisplay, setNavDisplay] = useState(false);
   const favorites = useSelector((state) => state.favorites);
+  console.log(navDisplay)
   return (
     <nav
       className={
@@ -15,7 +19,7 @@ const Header = () => {
       <Link to={`/`} style={{ textDecoration: "none" }}>
         <Logo logo="Book Store" />
       </Link>
-      <div className="d-flex align-items-center gap-2">
+      <div className="d-flex align-items-center gap-2 d-none d-md-flex">
         <Link
           to="favorite"
           className={
@@ -36,6 +40,7 @@ const Header = () => {
           Add Book
         </Link>
       </div>
+      <VerticalNav/>
     </nav>
   );
 };
