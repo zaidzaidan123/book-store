@@ -28,11 +28,11 @@ The server should now be running at a base URL (usually http://localhost:3000).
 
 ## Frontend Setup
 
-1. Clone the repository to your local machine using Git (or download the ZIP file):
+Clone the repository to your local machine using Git (or download the ZIP file):
+   
+git clone https://github.com/your-username/bookstore.git
 
-   git clone https://github.com/your-username/bookstore.git
 Navigate to the project directory:
-
 cd bookstore
 
 Install project dependencies:
