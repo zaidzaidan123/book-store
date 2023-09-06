@@ -33,7 +33,7 @@ The server should now be running at a base URL (usually http://localhost:3000).
 
 Clone the repository to your local machine using Git (or download the ZIP file):
    
-git clone https://github.com/your-username/bookstore.git
+git clone https://github.com/your-username/book-store.git
 
 Navigate to the project directory:
 
